@@ -10,27 +10,30 @@
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #808080; /* Gray background */
+            color: #000; /* Black text */
         }
         h1 {
             font-size: 36px;
-            color: #2d3e50;
+            color: #000; /* Black text */
             text-align: center;
             margin-bottom: 10px;
-            border-bottom: 2px solid #2d3e50;
+            border-bottom: 2px solid orange; /* Orange line */
             padding-bottom: 10px;
+            font-weight: bold; /* Bold text */
         }
         h2 {
             font-size: 24px;
-            color: #4a6fa5;
+            color: #000; /* Black text */
             margin-top: 30px;
-            border-bottom: 2px solid #4a6fa5;
+            border-bottom: 2px solid orange; /* Orange line */
             padding-bottom: 10px;
+            font-weight: bold; /* Bold text */
         }
         p {
             font-size: 18px;
-            color: #000; /* Changed to black */
+            color: #000; /* Black text */
+            font-weight: bold; /* Bold text */
         }
         ul {
             list-style-type: disc;
@@ -39,31 +42,42 @@
         li {
             margin: 10px 0;
             font-size: 18px;
+            font-weight: bold; /* Bold text */
         }
-        a {
-            text-decoration: none;
-            color: #000; /* Changed to black */
-            font-weight: bold;
-        }
-        a:hover {
-            color: #1c3c6c;
-        }
+        /* About Me Section - Different Font (Verdana) */
         .intro {
             margin-top: 20px;
             font-size: 20px;
-            color: #000; /* Changed to black */
+            color: #000; /* Black text */
+            font-weight: bold; /* Bold text */
+            font-family: 'Verdana', sans-serif; /* Different font for About Me */
         }
-        .highlight {
-            color: #000; /* Changed to black */
+        /* Repo Links Section - Different Font */
+        .repos a {
+            font-family: 'Georgia', serif; /* Different font for Repos */
+            text-decoration: none;
+            color: #000; /* Black text */
+            font-weight: bold; /* Bold text */
+            transition: color 0.3s ease;
         }
+        /* Hover Effect for Repo Links */
+        .repos a:hover {
+            color: orange; /* Orange color on hover */
+        }
+        /* Contact Section */
         .contact {
             font-size: 16px;
-            color: #000;
+            color: #000; /* Black text */
             text-align: center;
             margin-top: 10px;
         }
         .contact a {
             margin: 0 10px;
+            color: #000; /* Black color for contact links */
+            font-weight: bold; /* Bold text */
+        }
+        .contact a:hover {
+            color: orange; /* Orange on hover */
         }
     </style>
 </head>
@@ -86,7 +100,7 @@
     </div>
 
     <h2>My Repos</h2>
-    <ul>
+    <ul class="repos">
         <li><a href="Active-Directory-Home-Lab.html">Active-Directory-Home-Lab</a></li>
         <li><a href="Suricata-Home-Lab.html">Suricata-Home-Lab</a></li>
         <li><a href="FIM.html">FIM</a></li>
