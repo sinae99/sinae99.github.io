@@ -7,49 +7,34 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
             padding: 20px;
             background-color: #f4f4f9;
             color: #333;
-            line-height: 1.6;
         }
         h1 {
-            font-size: 40px;
+            font-size: 36px;
             color: #2d3e50;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border-bottom: 2px solid #2d3e50;
             padding-bottom: 10px;
         }
         .markdown-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            font-size: 20px;
-            word-wrap: break-word;
-        }
-        .markdown-content img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 20px auto;
-            border-radius: 8px;
-        }
-        .markdown-content pre {
-            background: #282c34;
-            color: #ffffff;
+            background-color: #f5f5f5;
             padding: 15px;
             border-radius: 5px;
-            overflow-x: auto;
-            font-size: 18px;
-        }
-        .markdown-content code {
-            font-family: Consolas, monospace;
-            font-size: 18px;
+            font-family: sans-serif;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+    <!-- Prism.js library for syntax highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/lib/marked.min.js"></script>
 </head>
 <body>
 
@@ -58,17 +43,18 @@
     <div class="markdown-content" id="readme-content">Loading README...</div>
 
     <script>
+        // GitHub raw link for the README file
         const readmeUrl = "https://raw.githubusercontent.com/sinae99/FIM/main/README.md";
 
+        // Fetch the README file and render it
         fetch(readmeUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text();
-            })
+            .then(response => response.text()) // Get the raw text
             .then(markdown => {
-                document.getElementById("readme-content").innerHTML = marked.parse(markdown);
+                // Convert markdown to HTML
+                const htmlContent = marked(markdown);
+                document.getElementById("readme-content").innerHTML = htmlContent;
+                // Apply syntax highlighting to code blocks
+                Prism.highlightAll();
             })
             .catch(error => {
                 console.error("Error fetching README:", error);
