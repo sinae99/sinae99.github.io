@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Home Lab - README</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+            color: #2d3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #2d3e50;
+            padding-bottom: 10px;
+        }
+        .markdown-content {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/lib/marked.min.js"></script>
+</head>
+<body>
+
+    <h1>Active Directory Home Lab - README</h1>
+
+    <div class="markdown-content" id="readme-content">Loading README...</div>
+
+    <script>
+        // GitHub API URL for fetching README content
+        const repoOwner = "sinae99";
+        const repoName = "Active-Directory-Home-Lab";
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/readme`;
+
+        // Fetch the README file from GitHub API
+        fetch(apiUrl, {
+            headers: { Accept: "application/vnd.github.v3.raw" }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch README");
+            }
+            return response.text(); // Get raw markdown
+        })
+        .then(markdown => {
+            // Convert markdown to HTML
+            const htmlContent = marked(markdown);
+            document.getElementById("readme-content").innerHTML = htmlContent;
+        })
+        .catch(error => {
+            console.error("Error fetching README:", error);
+            document.getElementById("readme-content").textContent = "Sorry, we couldn't fetch the README at this time.";
+        });
+    </script>
+
+</body>
+</html>
