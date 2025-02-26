@@ -30,7 +30,7 @@
             word-wrap: break-word;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/lib/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
@@ -39,30 +39,23 @@
     <div class="markdown-content" id="readme-content">Loading README...</div>
 
     <script>
-        // GitHub API URL for fetching README content
-        const repoOwner = "sinae99";
-        const repoName = "Active-Directory-Home-Lab";
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/readme`;
+        // Correct GitHub raw content URL
+        const readmeUrl = "https://raw.githubusercontent.com/sinae99/Active-Directory-Home-Lab/main/README.md";
 
-        // Fetch the README file from GitHub API
-        fetch(apiUrl, {
-            headers: { Accept: "application/vnd.github.v3.raw" }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to fetch README");
-            }
-            return response.text(); // Get raw markdown
-        })
-        .then(markdown => {
-            // Convert markdown to HTML
-            const htmlContent = marked(markdown);
-            document.getElementById("readme-content").innerHTML = htmlContent;
-        })
-        .catch(error => {
-            console.error("Error fetching README:", error);
-            document.getElementById("readme-content").textContent = "Sorry, we couldn't fetch the README at this time.";
-        });
+        fetch(readmeUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById("readme-content").innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error("Error fetching README:", error);
+                document.getElementById("readme-content").textContent = "Sorry, we couldn't fetch the README at this time.";
+            });
     </script>
 
 </body>
