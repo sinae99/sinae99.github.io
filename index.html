@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Page</title>
+    <title>Suricata Home Lab</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, I'm Sina!</h1>
-    <p>Welcome to my personal website.</p>
+
+    <h1>Suricata Home Lab README</h1>
+    <div id="content">Loading...</div>
+
+    <script>
+        async function loadReadme() {
+            const response = await fetch("https://raw.githubusercontent.com/sinae99/Suricata-Home-Lab/main/README.md");
+            const markdown = await response.text();
+            document.getElementById("content").innerHTML = marked.parse(markdown);
+        }
+        loadReadme();
+    </script>
+
 </body>
 </html>
