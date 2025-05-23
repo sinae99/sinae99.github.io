@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Active Directory Home Lab - README</title>
     <style>
         body {
@@ -10,26 +10,38 @@
             max-width: 900px;
             margin: auto;
             padding: 20px;
-            background-color: #121212; /* پس‌زمینه تیره */
-            color: #E0E0E0; /* متن روشن */
+            background-color: #1e1e1e;
+            color: #ddd;
             line-height: 1.6;
         }
         h1 {
             font-size: 40px;
-            color: #FFAE42; /* نارنجی متعادل */
+            color: #8b8b8b; /* gray */
             text-align: center;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #FFAE42; /* باریک‌تر ولی مشخص */
+            margin-bottom: 5px;
+            border-bottom: 2px solid #8b8b8b; /* gray divider */
             padding-bottom: 10px;
         }
+        .repo-link {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .repo-link a {
+            color: #8b8b8b; /* gray */
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .repo-link a:hover {
+            text-decoration: underline;
+            color: #3399ff; /* same blue as the border around markdown */
+        }
         .markdown-content {
-            background-color: #1E1E1E; /* پس‌زمینه تیره */
+            background-color: #2b2b2b;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 5px;
             font-size: 20px;
             word-wrap: break-word;
-            border: 3px solid #FFAE42; /* نارنجی کمی روشن‌تر */
-            box-shadow: 0px 0px 10px rgba(255, 174, 66, 0.5); /* سایه ملایم‌تر */
+            border: 2px solid #3399ff; /* آبی نفتی */
         }
         .markdown-content img {
             display: block;
@@ -39,7 +51,7 @@
             border-radius: 8px;
         }
         .markdown-content pre {
-            background: #282C34;
+            background: #252a35; /* a bit darker than #282c34 */
             color: #ffffff;
             padding: 15px;
             border-radius: 5px;
@@ -59,6 +71,9 @@
 <body>
 
     <h1>Active Directory Home Lab - README</h1>
+    <div class="repo-link">
+        <a href="https://github.com/sinae99/Active-Directory-Home-Lab" target="_blank">View on GitHub</a>
+    </div>
 
     <div class="markdown-content" id="readme-content">Loading README...</div>
 
