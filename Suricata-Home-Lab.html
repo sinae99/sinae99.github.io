@@ -16,10 +16,10 @@
         }
         h1 {
             font-size: 40px;
-            color: #ff8c00;
+            color: #8b8b8b; /* changed from #ff8c00 (orange) to gray */
             text-align: center;
             margin-bottom: 5px;
-            border-bottom: 2px solid #ff8c00;
+            border-bottom: 2px solid #8b8b8b; /* changed from orange to gray */
             padding-bottom: 10px;
         }
         .repo-link {
@@ -27,13 +27,13 @@
             margin-bottom: 30px;
         }
         .repo-link a {
-            color: #ff8c00;
+            color: #8b8b8b; /* changed from orange to gray */
             text-decoration: none;
             font-size: 18px;
         }
         .repo-link a:hover {
             text-decoration: underline;
-            color: #ffaa33;
+            color: #3399ff; /* changed hover color from orange shades to blue */
         }
         .markdown-content {
             background-color: #2b2b2b;
@@ -41,7 +41,8 @@
             border-radius: 5px;
             font-size: 20px;
             word-wrap: break-word;
-            border: 2px solid #cc6600;
+            border: 2px solid #3399ff; /* changed border from orange to blue */
+            min-height: 150px;
         }
         .markdown-content img {
             display: block;
@@ -62,6 +63,10 @@
             font-family: Consolas, monospace;
             font-size: 18px;
         }
+        /* Remove loading ellipsis animation, since file 2 uses plain text */
+        .loading-text {
+            /* No special styling needed */
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -69,7 +74,7 @@
 
     <h1>Suricata Home Lab - README</h1>
     <div class="repo-link">
-        <a href="https://github.com/sinae99/Suricata-Home-Lab" target="_blank">View on GitHub</a>
+        <a href="https://github.com/sinae99/Suricata-Home-Lab" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </div>
 
     <div class="markdown-content" id="readme-content">Loading README...</div>
