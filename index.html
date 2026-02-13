@@ -7,61 +7,42 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    :root {
-      --bg-primary: #0f0f0f;
-      --bg-secondary: #1a1a1a;
-      --bg-card: #252525;
-      --text-primary: #e5e5e5;
-      --text-secondary: #a3a3a3;
-      --accent-blue: #60a5fa;
-      --accent-blue-hover: #93c5fd;
-      --accent-grey: #94a3b8;
-      --border: #404040;
-      --grey-light: #525252;
-      --grey-dark: #171717;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
       line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Container */
-    .container {
-      max-width: 700px;
+      font-size: 15px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 40px 24px;
     }
 
-    /* Header */
-    header {
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    a {
+      color: #60a5fa;
+      text-decoration: none;
     }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation */
     nav {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #333;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -69,172 +50,167 @@
       gap: 16px;
     }
 
-    .logo {
-      font-size: 1.2rem;
+    .nav-logo {
+      font-size: 18px;
       font-weight: 600;
-      color: var(--text-primary);
+      color: #e5e5e5;
       text-decoration: none;
     }
 
-    .logo span {
-      color: var(--accent-blue);
+    .nav-logo span {
+      color: #60a5fa;
     }
 
-    .nav-links {
+    .nav-menu {
       display: flex;
-      gap: 20px;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
-    .nav-links a {
-      color: var(--text-secondary);
+    .nav-menu a {
+      font-size: 14px;
+      color: #999;
       text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 400;
     }
 
-    .nav-links a:hover {
-      color: var(--accent-blue);
+    .nav-menu a:hover {
+      color: #60a5fa;
     }
 
-    /* Hero Section */
-    .hero {
-      padding: 50px 0 40px;
-      text-align: center;
+    /* Header */
+    header {
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #333;
     }
 
-    .hero .name {
-      font-size: 2.5rem;
+    h1 {
+      font-size: 28px;
       font-weight: 600;
+      margin-bottom: 8px;
+      color: #60a5fa;
+    }
+
+    .subtitle {
+      color: #999;
+      font-size: 16px;
       margin-bottom: 12px;
-      color: var(--accent-blue);
     }
 
-    .hero .name span {
-      color: var(--accent-blue);
-    }
-
-    .hero .tagline {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-      font-weight: 400;
-    }
-
-    .hero .location {
-      font-size: 0.85rem;
-      color: var(--grey-light);
-      margin-bottom: 24px;
-    }
-
-    .hero .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .hero .contact-links a {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      text-decoration: none;
-    }
-
-    .hero .contact-links a:hover {
-      color: var(--accent-blue);
-    }
-
-    /* Section */
-    section {
-      margin: 65px 0;
-    }
-
-    #skills {
-      margin-bottom: 90px;
-    }
-
-    .section-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      color: var(--text-primary);
-      border-bottom: 2px solid var(--accent-blue);
-      padding-bottom: 8px;
-    }
-
-    /* Cards */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
+    .location {
+      color: #888;
+      font-size: 14px;
       margin-bottom: 16px;
     }
 
-    .card-title {
-      font-size: 1.1rem;
+    .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      color: #60a5fa;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 50px;
+    }
+
+    .section-card {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 20px;
       font-weight: 600;
-      color: var(--text-primary);
+      margin-bottom: 20px;
+      color: #e5e5e5;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #60a5fa;
+    }
+
+    /* Experience/Education */
+    .item {
+      margin-bottom: 30px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 6px;
     }
 
-    .card-meta {
-      font-size: 0.85rem;
-      color: var(--accent-blue);
-      margin-bottom: 12px;
-      font-weight: 400;
+    .item-title {
+      font-weight: 600;
+      color: #e5e5e5;
+      font-size: 16px;
     }
 
-    .card-content {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.6;
+    .item-meta {
+      color: #888;
+      font-size: 14px;
     }
 
-    /* Lists */
+    .item-company {
+      color: #60a5fa;
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
 
     ul li {
-      padding-left: 24px;
+      padding-left: 20px;
       position: relative;
-      margin-bottom: 12px;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #bbb;
+      font-size: 14px;
     }
 
     ul li::before {
-      content: '▸';
+      content: '•';
       position: absolute;
       left: 0;
-      color: var(--accent-blue);
-      font-weight: bold;
+      color: #60a5fa;
     }
 
     /* Skills */
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
-      margin-top: 20px;
+      margin-bottom: 30px;
     }
 
-    .skill-category {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 16px;
+    .skill-cat {
+      flex: 1;
+      min-width: 150px;
     }
 
-    .skill-category h4 {
-      font-size: 0.8rem;
+    .skill-cat-title {
+      font-size: 12px;
       text-transform: uppercase;
+      color: #60a5fa;
       letter-spacing: 0.5px;
-      color: var(--accent-blue);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-weight: 500;
     }
 
@@ -245,375 +221,356 @@
     }
 
     .skill-tag {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
+      font-size: 13px;
+      color: #e5e5e5;
+      background: #1a1a1a;
       padding: 4px 10px;
       border-radius: 4px;
-      font-size: 0.8rem;
-      border: 1px solid var(--border);
+      border: 1px solid #333;
     }
 
     /* Projects */
-    .projects-grid {
+    .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 16px;
-      margin-top: 20px;
+      margin-bottom: 24px;
     }
 
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
+    .project {
       padding: 16px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #111;
     }
 
-    .project-card h4 {
-      font-size: 1rem;
+    .project h3 {
+      font-size: 15px;
+      font-weight: 600;
       margin-bottom: 6px;
     }
 
-    .project-card h4 a {
-      color: var(--text-primary);
-      text-decoration: none;
+    .project h3 a {
+      color: #e5e5e5;
     }
 
-    .project-card h4 a:hover {
-      color: var(--accent-blue);
-    }
-
-    .project-card p {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
+    .project p {
+      font-size: 13px;
+      color: #999;
       line-height: 1.5;
     }
 
-    .explore-more {
-      text-align: center;
-      margin-top: 32px;
-    }
-
+    /* Buttons */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 10px 20px;
-      background: var(--accent-blue);
-      color: var(--bg-primary);
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: 0.9rem;
+      display: inline-block;
+      padding: 8px 16px;
+      background: #60a5fa;
+      color: #0a0a0a;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 20px;
     }
 
     .btn:hover {
-      background: var(--accent-blue-hover);
+      background: #93c5fd;
+      text-decoration: none;
     }
 
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-primary);
-    }
-
-    .btn-secondary:hover {
-      background: var(--bg-secondary);
-      border-color: var(--accent-blue);
+    .btn-center {
+      text-align: center;
+      margin-top: 30px;
     }
 
     /* Footer */
     footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
       text-align: center;
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      margin-top: 50px;
-      color: var(--text-secondary);
-      font-size: 0.85rem;
+      color: #888;
+      font-size: 13px;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero .name {
-        font-size: 2rem;
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 16px;
       }
 
-      .nav-links {
-        gap: 16px;
+      h1 {
+        font-size: 24px;
       }
 
-      .section-title {
-        font-size: 1.2rem;
-      }
-
-      .projects-grid {
+      .projects {
         grid-template-columns: 1fr;
       }
 
-      .skills-container {
-        grid-template-columns: 1fr;
+      .skills {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#" class="nav-logo">Sina<span>E</span></a>
+    <div class="nav-menu">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">My Projects</a>
+      <a href="#contact">Connect</a>
+    </div>
+  </nav>
+
   <header>
-    <nav class="container">
-      <a href="#" class="logo">Sina<span>E</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">My Projects</a>
-        <a href="#contact">Connect</a>
-      </div>
-    </nav>
+    <h1>Sina Ebrahimi</h1>
+    <div class="subtitle">DevOps Engineer</div>
+    <div class="location">Tehran, Iran</div>
+    <div class="links">
+      <a href="mailto:xsinaebrahimi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/sinae99" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/sina-ebrahimii" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div class="name">Sina <span>Ebrahimi</span></div>
-      <p class="tagline">DevOps Engineer</p>
-      <p class="location"><i class="fas fa-map-marker-alt"></i> Tehran, Iran</p>
-      <div class="contact-links">
-        <a href="mailto:xsinaebrahimi@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/sinae99" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sina-ebrahimii" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p style="color: #bbb; margin-bottom: 16px;">
+      Im a DevOps Engineer working on automation, containerized infrastructure, and CI/CD pipelines in Linux environments, with 2.5 years of experience in SOC operations.
+    </p>
+    <p style="color: #bbb; margin-bottom: 16px;">
+      I have Experience in infrastructure setups, Linux system administration, and monitoring (Security focused).
+    </p>
+    <p style="color: #bbb; margin-bottom: 16px;">
+      I love to put problems on paper then find the solution then make everything as code.
+    </p>
+    <a href="https://github.com/sinae99/sinae99.github.io/raw/main/SinaEbrahimi_cv.pdf.pdf" target="_blank" class="btn">
+      <i class="fas fa-file-pdf"></i> Download Résumé
+    </a>
+  </section>
 
-    <section id="about" class="container">
-      <h2 class="section-title">About</h2>
-      <div class="card">
-        <div class="card-content">
-          <p>Im a DevOps Engineer working on automation, containerized infrastructure, and CI/CD pipelines in Linux environments, with 2.5 years of experience in SOC operations.</p>
-          <p style="margin-top: 12px;">I have Experience in infrastructure setups, Linux system administration, and monitoring (Security focused).</p>
-          <a href="https://github.com/sinae99/sinae99.github.io/raw/main/SinaEbrahimi_cv.pdf" target="_blank" class="btn" style="margin-top: 16px;">
-            <i class="fas fa-file-pdf"></i> Download My Résumé
-          </a>
-        </div>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Bachelor of Computer Science</div>
+        <div class="item-meta">2018 – 2024</div>
       </div>
-    </section>
+      <div style="color: #999; font-size: 14px;"><strong>Amirkabir University of Technology (Tehran Polytechnic)</strong></div>
+    </div>
+  </section>
 
-    <section id="education" class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="card">
-        <div class="card-title">Bachelor of Computer Science</div>
-        <div class="card-meta">Amirkabir University of Technology (Tehran Polytechnic) • 2018 – 2024</div>
+  <section id="experience">
+    <h2>Experience</h2>
+    
+    <div class="section-card">
+      <div class="item">
+        <div class="item-company">Arcaptcha</div>
+        <div class="item-header">
+          <div class="item-title">DevOps Engineer</div>
+          <div class="item-meta">Feb 2026 – Present</div>
+        </div>
+        <ul>
+          <li>Deployed and integrated internal services (n8n, Nexus) into Kubernetes cluster</li>
+          <li>Automated GitLab Runner deployment and configuration using Ansible</li>
+          <li>Designed HA Postgres, Mongo, and Redis clusters using Docker Compose, automated with Ansible</li>
+          <li>Implemented TLS connections between applications and databases using Kubernetes cert-manager</li>
+          <li>Set up monitoring stack (Prometheus and Grafana) for internal services</li>
+          <li>Developed Ansible-based Dockerfile and image scanning workflow</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section id="experience" class="container">
-      <h2 class="section-title">Experience</h2>
-      
-      <div class="card">
-        <div class="card-title">DevOps Engineer</div>
-        <div class="card-meta">Arcaptcha • Feb 2026 – Present</div>
-        <div class="card-content">
-          <ul>
-            <li>Deployed and integrated internal services (like n8n, Nexus) into Kubernetes cluster</li>
-            <li>Automated GitLab Runner deployment and configuration using Ansible</li>
-            <li>Designed HA Postgres, Mongo, and Redis clusters using Docker Compose, automated with Ansible</li>
-            <li>Implemented TLS connections between applications and databases using Kubernetes cert-manager</li>
-            <li>Set up monitoring stack (Prometheus and Grafana) for internal services</li>
-            <li>Developed Ansible-based Dockerfile and image scanning workflow</li>
-          </ul>
+    <div class="section-card">
+      <div class="item">
+        <div class="item-company">Arcaptcha</div>
+        <div class="item-header">
+          <div class="item-title">DevOps Intern</div>
+          <div class="item-meta">Nov 2025 – Feb 2026</div>
         </div>
+        <ul>
+          <li>Assisted in Linux server administration and infrastructure setup</li>
+          <li>Deployed and tested applications in a Kubernetes (k3s) environment</li>
+          <li>Assisted in Kubernetes deployments and basic ingress configuration</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="card-title">DevOps Intern</div>
-        <div class="card-meta">Arcaptcha • Nov 2025 – Feb 2026</div>
-        <div class="card-content">
-          <ul>
-            <li>Assisted in Linux server administration and infrastructure setup</li>
-            <li>Deployed and tested applications in Kubernetes (k3s) environment</li>
-            <li>Assisted in Kubernetes deployments and basic ingress configuration</li>
-          </ul>
+    <div class="section-card">
+      <div class="item">
+        <div class="item-company">Central Securities Depository of Iran</div>
+        <div class="item-header">
+          <div class="item-title">Security Analyst</div>
+          <div class="item-meta">Apr 2023 – Oct 2025</div>
         </div>
+        <ul>
+          <li>Monitored security logs from WAF, Windows/Linux servers, Domain Controllers, firewalls, and endpoints</li>
+          <li>Built Splunk dashboards to monitor the most important assets and services</li>
+          <li>Investigated security alerts and escalated confirmed incidents to L2 team</li>
+          <li>Tuned Splunk ES correlation rules to reduce false positives</li>
+          <li>Prepared incident reports and shift documentation</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="card-title">Security Analyst</div>
-        <div class="card-meta">Central Securities Depository of Iran • Apr 2023 – Oct 2025</div>
-        <div class="card-content">
-          <ul>
-            <li>Monitored security logs from WAF, Windows/Linux servers, Domain Controllers, firewalls, and endpoints</li>
-            <li>Built Splunk dashboards to monitor critical assets and services</li>
-            <li>Investigated security alerts and escalated confirmed incidents</li>
-            <li>Tuned Splunk ES correlation rules to reduce false positives</li>
-            <li>Prepared incident reports and shift documentation</li>
-          </ul>
+    <div class="section-card">
+      <div class="item">
+        <div class="item-company">Saba System Sadra</div>
+        <div class="item-header">
+          <div class="item-title">SOC Analyst Intern</div>
+          <div class="item-meta">Dec 2022 – Apr 2023</div>
         </div>
+        <ul>
+          <li>Assisted in monitoring security alerts and log analysis</li>
+          <li>Studied SOC processes, incident handling, and SIEM concepts</li>
+        </ul>
       </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <div class="card-title">SOC Analyst Intern</div>
-        <div class="card-meta">Saba System Sadra • Dec 2022 – Apr 2023</div>
-        <div class="card-content">
-          <ul>
-            <li>Assisted in monitoring security alerts and log analysis</li>
-            <li>Studied SOC processes, incident handling, and SIEM concepts</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h4>Infrastructure</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Docker Compose</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Helm</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Automation</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Ansible</span>
-            <span class="skill-tag">Terraform</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>CI/CD</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitLab CI</span>
-            <span class="skill-tag">ArgoCD</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Observability</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Prometheus</span>
-            <span class="skill-tag">Grafana</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Networking</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">DNS</span>
-            <span class="skill-tag">Nginx</span>
-            <span class="skill-tag">TLS</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h4>Scripting</h4>
-          <div class="skill-tags">
-            <span class="skill-tag">Bash</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Go</span>
-          </div>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-cat">
+        <div class="skill-cat-title">Infrastructure</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Docker Compose</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Helm</span>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 32px;">
-        <a href="https://github.com/sinae99/sinae99.github.io/tree/main/certifications" target="_blank" class="btn">
-          <i class="fas fa-certificate"></i> View Certificates
-        </a>
-      </div>
-    </section>
-
-    <section id="projects" class="container">
-      <h2 class="section-title">My Projects</h2>
-      
-      <div class="projects-grid">
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/HA-DB-Docker-Compose" target="_blank">HA-DB-Docker-Compose</a></h4>
-          <p>Postgres, Mongo, and Redis clusters deployed for a three-node Linux environment using Docker Compose</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/repo-orchestrator" target="_blank">repo-orchestrator</a></h4>
-          <p>An Ansible-based tool for scanning, and doing changes for repositories of a GitLab instanse</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/gitlab-runner" target="_blank">gitlab-runner</a></h4>
-          <p>GitLab Runner deployment and configuration automation using Ansible</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/prometheus-training" target="_blank">prometheus-training</a></h4>
-          <p>Prometheus monitoring stack deployment with Nginx and nginx_exporter on k3s</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/n8n" target="_blank">n8n</a></h4>
-          <p>n8n workflow deployment on Kubernetes cluster using helm and my own design</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/basic-TLS-connectivity-lab" target="_blank">basic-TLS-connectivity-lab</a></h4>
-          <p>TLS connectivity implementation using Cert-Manager for databases (Mongo, Redis, Postgres)</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/Dockerfile-check-Tools" target="_blank">Dockerfile-check-Tools</a></h4>
-          <p>Validate Dockerfile and container images using various security and best-practice tools</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/Basic-Dockerfile-check-sh" target="_blank">Basic-Dockerfile-check-sh</a></h4>
-          <p>Shell script to check if Dockerfile includes USER directive and other security best practices</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/LPIC2-LAB" target="_blank">LPIC2-LAB</a></h4>
-          <p>LPIC-2 lab machines and practice environments for Linux system administration</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/Active-Directory-Home-Lab" target="_blank">Active-Directory-Home-Lab</a></h4>
-          <p>Setup a basic Active Directory environment on virtual home network for security testing</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/set-up-basic-Suricata" target="_blank">set-up-basic-Suricata</a></h4>
-          <p>Set up Suricata as a Network Intrusion Detection System (NIDS) for security monitoring</p>
-        </div>
-
-        <div class="project-card">
-          <h4><a href="https://github.com/sinae99/SOC-Linux-Monitoring-Starter-Pack" target="_blank">SOC-Linux-Monitoring-Starter-Pack</a></h4>
-          <p>Basic metrics and monitoring scripts for SOC environments and Linux security monitoring</p>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Ansible</span>
+          <span class="skill-tag">Terraform</span>
         </div>
       </div>
-
-      <div class="explore-more">
-        <a href="https://github.com/sinae99?tab=repositories" target="_blank" class="btn">
-          <i class="fab fa-github"></i> View All My Projects
-        </a>
-      </div>
-    </section>
-
-    <section id="contact" class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="card">
-        <div class="card-content" style="text-align: center;">
-          <p style="margin-bottom: 20px;">connect to me</p>
-          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="mailto:xsinaebrahimi@gmail.com" class="btn">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://www.linkedin.com/in/sina-ebrahimii" target="_blank" class="btn btn-secondary">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/sinae99" target="_blank" class="btn btn-secondary">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">CI/CD</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitLab CI</span>
+          <span class="skill-tag">ArgoCD</span>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Observability</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Prometheus</span>
+          <span class="skill-tag">Grafana</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Networking</div>
+        <div class="skill-tags">
+          <span class="skill-tag">DNS</span>
+          <span class="skill-tag">Nginx</span>
+          <span class="skill-tag">TLS</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Scripting</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Go</span>
+        </div>
+      </div>
+    </div>
+    <div class="btn-center">
+      <a href="https://github.com/sinae99/sinae99.github.io/tree/main/certifications" target="_blank" class="btn">
+        <i class="fas fa-certificate"></i> View Certificates
+      </a>
+    </div>
+  </section>
 
-  <footer class="container">
-    <p>&copy; 2026 Sina Ebrahimi.</p>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/HA-DB-Docker-Compose" target="_blank">HA-DB-Docker-Compose</a></h3>
+        <p>High-availability Postgres, Mongo, and Redis clusters deployed on virtual machines using Docker Compose</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/repo-orchestrator" target="_blank">repo-orchestrator</a></h3>
+        <p>Ansible-based framework for discovering, scanning, and orchestrating changes across large Git repositories</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/gitlab-runner" target="_blank">gitlab-runner</a></h3>
+        <p>GitLab Runner deployment and configuration automation using Ansible</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/prometheus-training" target="_blank">prometheus-training</a></h3>
+        <p>Prometheus monitoring stack deployment with Nginx and nginx_exporter on k3s</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/n8n" target="_blank">n8n</a></h3>
+        <p>n8n workflow automation platform deployment on Kubernetes cluster</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/basic-TLS-connectivity-lab" target="_blank">basic-TLS-connectivity-lab</a></h3>
+        <p>TLS connectivity implementation using Cert-Manager for databases (Mongo, Redis, Postgres)</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/Dockerfile-check-Tools" target="_blank">Dockerfile-check-Tools</a></h3>
+        <p>Validate Dockerfile and container images using various security and best-practice tools</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/Basic-Dockerfile-check-sh" target="_blank">Basic-Dockerfile-check-sh</a></h3>
+        <p>Shell script to check if Dockerfile includes USER directive and other security best practices</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/LPIC2-LAB" target="_blank">LPIC2-LAB</a></h3>
+        <p>LPIC-2 lab machines and practice environments for Linux system administration</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/Active-Directory-Home-Lab" target="_blank">Active-Directory-Home-Lab</a></h3>
+        <p>Setup a basic Active Directory environment on virtual home network for security testing</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/set-up-basic-Suricata" target="_blank">set-up-basic-Suricata</a></h3>
+        <p>Set up Suricata as a Network Intrusion Detection System (NIDS) for security monitoring</p>
+      </div>
+
+      <div class="project">
+        <h3><a href="https://github.com/sinae99/SOC-Linux-Monitoring-Starter-Pack" target="_blank">SOC-Linux-Monitoring-Starter-Pack</a></h3>
+        <p>Basic metrics and monitoring scripts for SOC environments and Linux security monitoring</p>
+        </div>
+    </div>
+    <div class="btn-center">
+      <a href="https://github.com/sinae99?tab=repositories" target="_blank" class="btn">
+        <i class="fab fa-github"></i> View All Projects
+      </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Connect</h2>
+    <p style="color: #bbb; margin-bottom: 20px;">Let's connect and discuss DevOps, automation, or infrastructure.</p>
+    <div class="links">
+      <a href="mailto:xsinaebrahimi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/sina-ebrahimii" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/sinae99" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Sina Ebrahimi</p>
   </footer>
 
 </body>
