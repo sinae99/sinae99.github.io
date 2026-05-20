@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sina Ebrahimi | DevOps Engineer</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <style>
     * {
       margin: 0;
@@ -38,7 +38,6 @@
       text-decoration: underline;
     }
 
-    /* Navigation */
     nav {
       margin-bottom: 40px;
       padding-bottom: 20px;
@@ -77,7 +76,6 @@
       color: #60a5fa;
     }
 
-    /* Header */
     header {
       margin-bottom: 60px;
       padding-bottom: 20px;
@@ -118,7 +116,6 @@
       color: #60a5fa;
     }
 
-    /* Sections */
     section {
       margin-bottom: 50px;
     }
@@ -140,9 +137,12 @@
       border-bottom: 2px solid #60a5fa;
     }
 
-    /* Experience/Education */
     .item {
       margin-bottom: 30px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
     }
 
     .item-header {
@@ -192,7 +192,6 @@
       color: #60a5fa;
     }
 
-    /* Skills */
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -229,7 +228,6 @@
       border: 1px solid #333;
     }
 
-    /* Projects */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -260,7 +258,6 @@
       line-height: 1.5;
     }
 
-    /* Buttons */
     .btn {
       display: inline-block;
       padding: 8px 16px;
@@ -281,7 +278,6 @@
       margin-top: 30px;
     }
 
-    /* Footer */
     footer {
       margin-top: 60px;
       padding-top: 20px;
@@ -331,21 +327,18 @@
     <div class="links">
       <a href="mailto:xsinaebrahimi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://github.com/sinae99" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/sina-ebrahimii" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.linkedin.com/in/Sina-Ebrahimii" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </div>
   </header>
 
   <section id="about">
     <h2>About</h2>
     <p style="color: #bbb; margin-bottom: 16px;">
-      Im a DevOps Engineer working on automation, containerized infrastructure, and CI/CD pipelines in Linux environments, with a focus on integrating security into infra and deployment workflows
+      DevOps Engineer with expertise in Linux administration, infrastructure automation, container orchestration (Kubernetes/Docker), and CI/CD pipelines.
     </p>
     <p style="color: #bbb; margin-bottom: 16px;">
-      I have experience in infrastructure setup, Linux systems, monitoring, and applying security practices across systems and pipelines.
+      With a security-focused background from 2.5 years in SOC operations.
     </p>
-    <a href="https://github.com/sinae99/sinae99.github.io/raw/main/SinaEbrahimi_cv.pdf" target="_blank" class="btn">
-      <i class="fas fa-file-pdf"></i> Download My Résumé
-    </a>
   </section>
 
   <section id="education">
@@ -361,36 +354,23 @@
 
   <section id="experience">
     <h2>Experience</h2>
-    
-    <div class="section-card">
-      <div class="item">
-        <div class="item-company">Arcaptcha</div>
-        <div class="item-header">
-          <div class="item-title">DevOps Engineer</div>
-          <div class="item-meta">Feb 2026 – Present</div>
-        </div>
-        <ul>
-          <li>Improved internal infra by moving core services and tools (like MinIO, n8n, Nexus) into Kubernetes for better management</li>
-          <li>Built an Ansible-based Docker image scanning tool to improve container image security</li>
-          <li>Set up a Prometheus and Grafana monitoring stack for internal services and created additional dashboards with a focus on security</li>
-          <li>Automated GitLab Runner deployment and configuration using Ansible, reducing manual Runner setups</li>
-          <li>Designed HA Postgres, Mongo, and Redis clusters using Docker Compose, automated with Ansible</li>
-          <li>Implemented TLS between one internal service and its database using Kubernetes cert-manager to secure communications</li>
-        </ul>
-      </div>
-    </div>
 
     <div class="section-card">
       <div class="item">
         <div class="item-company">Arcaptcha</div>
         <div class="item-header">
-          <div class="item-title">DevOps Intern</div>
-          <div class="item-meta">Nov 2025 – Feb 2026</div>
+          <div class="item-title">DevOps Engineer</div>
+          <div class="item-meta">Nov 2025 – Present</div>
         </div>
         <ul>
-          <li>Assisted in Linux server administration and infrastructure setup</li>
-          <li>Deployed and tested applications in a Kubernetes (k3s) environment</li>
-          <li>Assisted in Kubernetes deployments and basic ingress configuration</li>
+          <li>Migrated core infra services (like Databases, MinIO, Nexus, Metabase, n8n) from standalone servers to Kubernetes clusters</li>
+          <li>Automated the deployment of GitLab Runners and Docker security scanning tools using Ansible, accelerating CI/CD pipelines</li>
+          <li>Set up a Prometheus and Grafana stack for internal infrastructure monitoring</li>
+          <li>Created custom dashboards and alerting rules for system and traffic anomalies</li>
+          <li>Automated the deployment of Locust load-testing infra on Kubernetes using Ansible, enabling application performance testing</li>
+          <li>Implemented automated backup retention policies to manage disk space consumption and optimizing storage costs on cloud</li>
+          <li>Automated the deployment of PostgreSQL, Mongo, and Redis clusters across virtual machines using Ansible</li>
+          <li>Configured and provisioned Linux servers, handling system administration and user management</li>
         </ul>
       </div>
     </div>
@@ -399,18 +379,17 @@
       <div class="item">
         <div class="item-company">Central Securities Depository of Iran</div>
         <div class="item-header">
-          <div class="item-title">Security Operations Center Analyst</div>
+          <div class="item-title">Security Operations Analyst (on-site - via Saba System Sadra)</div>
           <div class="item-meta">Apr 2023 – Oct 2025</div>
         </div>
         <ul>
-          <li>Joined as one of the first members of a newly formed SOC team and helped build its initial monitoring structure</li>
-          <li>Built 30+ production SPL searches and dashboards used daily by SOC analysts and IR teams</li>
-          <li>Organized monitoring across key sources like Windows systems, Sysmon, Linux, Active Directory, WAF, and endpoint security, improving infrastructure visibility</li>
-          <li>Deployed real-time dashboards on SOC wall monitors for continuous event monitoring</li>
-          <li>Reviewed and tuned ~10 important Splunk ES correlation rules, reducing false positives and improving alert quality</li>
-          <li>Created a structured incident documentation process to improve investigation continuity</li>
+          <li>Joined as a founding member of a newly formed SOC team and helped build its initial monitoring structure</li>
+          <li>Built 20+ production Splunk(SPL) searches and dashboards used daily by SOC analysts and IR teams, reducing the time required for initial incident triage flow and investigation</li>
+          <li>Organized monitoring across key sources like Windows/Linux systems, Sysmon, WAF, improving infra visibility</li>
+          <li>Deployed real-time dashboards on SOC wall displays for continuous event monitoring</li>
+          <li>Created a structured incident documentation process to improve investigation continuity and standardizing shift workflows</li>
           <li>Worked with SIEM engineers to improve log onboarding and centralized logging</li>
-          <li>Helped onboard and guide new SOC analysts on dashboards and monitoring workflows</li>
+          <li>Onboarded and guided new SOC analysts on dashboards and monitoring workflows</li>
         </ul>
       </div>
     </div>
@@ -419,11 +398,11 @@
       <div class="item">
         <div class="item-company">Saba System Sadra</div>
         <div class="item-header">
-          <div class="item-title">Security Analyst Intern</div>
+          <div class="item-title">SOC Analyst Intern</div>
           <div class="item-meta">Dec 2022 – Apr 2023</div>
         </div>
         <ul>
-          <li>Assisted in monitoring security alerts and log analysis</li>
+          <li>Assisted in monitoring security alerts and log analysis.</li>
           <li>Studied SOC processes, incident handling, and SIEM concepts</li>
         </ul>
       </div>
@@ -434,54 +413,71 @@
     <h2>Skills</h2>
     <div class="skills">
       <div class="skill-cat">
-        <div class="skill-cat-title">Infrastructure</div>
+        <div class="skill-cat-title">Infra</div>
         <div class="skill-tags">
-          <span class="skill-tag">Kubernetes</span>
           <span class="skill-tag">Docker</span>
           <span class="skill-tag">Docker Compose</span>
-          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Kubernetes</span>
           <span class="skill-tag">Helm</span>
+          <span class="skill-tag">Linux (Ubuntu)</span>
         </div>
       </div>
+
       <div class="skill-cat">
-        <div class="skill-cat-title">Automation</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Ansible</span>
-          <span class="skill-tag">Terraform</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-title">CI/CD</div>
+        <div class="skill-cat-title">CI/CD & Version Control</div>
         <div class="skill-tags">
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitLab CI</span>
           <span class="skill-tag">ArgoCD</span>
         </div>
       </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title">IaC & Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Ansible</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title">Scripting and Programming</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Go (basic)</span>
+        </div>
+      </div>
+
       <div class="skill-cat">
         <div class="skill-cat-title">Observability</div>
         <div class="skill-tags">
           <span class="skill-tag">Prometheus</span>
           <span class="skill-tag">Grafana</span>
+          <span class="skill-tag">Splunk ES</span>
         </div>
       </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title">Databases & Storage</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">MinIO</span>
+        </div>
+      </div>
+
       <div class="skill-cat">
         <div class="skill-cat-title">Networking</div>
         <div class="skill-tags">
           <span class="skill-tag">DNS</span>
           <span class="skill-tag">Nginx</span>
+          <span class="skill-tag">Traefik</span>
           <span class="skill-tag">TLS</span>
         </div>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-title">Scripting</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Bash</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Go</span>
-        </div>
-      </div>
     </div>
+
     <div class="btn-center">
       <a href="https://github.com/sinae99/sinae99.github.io/tree/main/certifications" target="_blank" class="btn">
         <i class="fas fa-certificate"></i> View Certificates
@@ -550,8 +546,9 @@
       <div class="project">
         <h3><a href="https://github.com/sinae99/SOC-Linux-Monitoring-Starter-Pack" target="_blank">SOC-Linux-Monitoring-Starter-Pack</a></h3>
         <p>Basic metrics and monitoring scripts for SOC environments and Linux security monitoring</p>
-        </div>
+      </div>
     </div>
+
     <div class="btn-center">
       <a href="https://github.com/sinae99?tab=repositories" target="_blank" class="btn">
         <i class="fab fa-github"></i> View All Projects
@@ -561,9 +558,10 @@
 
   <section id="contact">
     <h2>Connect</h2>
-    
     <div class="links">
       <a href="mailto:xsinaebrahimi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/sinae99" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/Sina-Ebrahimii" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </div>
   </section>
 
